@@ -1,38 +1,144 @@
-# DiscordJS Bot Template
-![](./public/template_bot.png)
+# EzVocabBot
 
-## Getting Started
-These instructions will help you set up a local copy of the project for development and testing purposes.
+EzVocabBot is a personal Discord vocabulary assistant focused on English (or any language of your choice) improvement, daily practice, and quiz repetition.
 
-### Installation
-Below is an example of how you can set up the **DiscordJS Bot Template** for your Project:
+The bot is built with:
+- JavaScript (`CommonJS`)
+- `discord.js`
+- Microsoft SQL Server (`mssql`)
 
-1. **Clone the Repository**  
-   Open your terminal and run the following command to clone the repository to your local machine:
-   ```bash
-   git clone https://github.com/october37/DiscordJS-Bot-Template.git
+## What this bot does
 
-2. **Navigate to the Project Directory**  
-   Change to the directory where the bot was cloned:
-   ```bash
-   cd discordjs-bot-template
+- Daily vocabulary delivery to a configured channel
+- Persistent quiz flow with:
+  - multiple-choice questions
+  - type-matching distractors (noun with noun, sentence with sentence, etc.)
+  - typing repetition (3 correct submits per question)
+- Vocabulary management via slash commands + modals
+- Case-insensitive duplicate protection by `(text, type)`
 
-3. **Install Dependencies**  
-   Ensure you have Node.js and npm (Node Package Manager) installed. Then, install the necessary packages by running:
-   ```bash
-   npm install
+## Current features
 
-4. **Configure the Bot**  
-   Open the configuration file located at **config/config.EXAMPLE.json** rename it to **config.json** and customize the settings according to your preferences. You can set the bot's name, log channel, and other important configurations there.
+### Vocabulary commands
 
-5. **Start the Bot**  
-   To start the bot, navigate to the main directory of your project and run the following command:
-   ```bash
-   node bootstrap.js
+- `/add-word` - open modal and add one word/sentence
+- `/update-word id:<id>` - update an existing entry
+- `/delete-word id:<id>` - hard delete by ID
+- `/search-word text:<query>` - search entries by text
+- `/word-by-id id:<id>` - get full detail for one entry
+- `/import-json file:<attachment>` - bulk import from JSON array
 
-> [!CAUTION]
-> **Important**: Please refrain from sharing your Discord bot token! Sharing your token can give unauthorized users complete control over your bot. To keep your token secure, store it safely in a .json file.
+### Quiz and scheduler commands
 
-See also the list of
-[contributors](https://github.com/october37/DiscordJS-Bot-Template/contributors)
-who have contributed to this project.
+- `/quiz-now` - start a quiz immediately in current channel
+- `/daily-now` - trigger a daily word immediately
+- `/schedule-status` - view scheduler settings
+
+### Scheduling behavior
+
+- Timezone: `Australia/Adelaide`
+- Daily words at `09:00`, `12:00`, `16:00`
+- Quiz at configured daily quiz time
+- Missed tasks while bot is offline are skipped (no backfill)
+
+## Setup
+
+### 1) Install requirements
+
+- Node.js 20+
+- SQL Server (Express is fine)
+- A Discord bot application/token
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+### 2) Configure bot settings
+
+Create `config/config.json` from `config/config.EXAMPLE.json` and fill all required values.
+
+Important keys:
+- Discord:
+  - `token`
+  - `daily_word_channel_id`
+  - `quiz_channel_id`
+  - `botlogs_channel`
+- Scheduler:
+  - `timezone`
+  - `daily_word_times`
+  - `daily_quiz_time`
+- SQL:
+  - `db.server`
+  - `db.database`
+  - `db.user`
+  - `db.password`
+  - `db.port`
+  - `db.encrypt`
+  - `db.trustServerCertificate`
+
+> `config/config.json` is gitignored. Do not commit secrets.
+
+### 3) Discord application permissions
+
+When generating the invite URL, use scopes:
+- `bot`
+- `applications.commands`
+
+Minimum bot permissions:
+- View Channels
+- Send Messages
+- Embed Links
+- Read Message History
+
+### 4) SQL connection notes (Windows / named instance)
+
+If you use a named instance and get connection timeouts:
+- Prefer host + explicit port in config:
+  - `server: "localhost"`
+  - `port: <instance_tcp_port>`
+- Ensure TCP/IP is enabled for the SQL instance and SQL service was restarted.
+
+### 5) Start bot
+
+```bash
+npm start
+```
+
+Expected startup logs include:
+- bot login success
+- command registration success
+- database schema initialization
+- scheduler armed message
+
+## JSON import format
+
+Use an array of objects:
+
+```json
+[
+  {
+    "text": "feature",
+    "type": "noun",
+    "vi_definition": "tinh nang; dac diem",
+    "examples": [
+      "This app has a useful feature."
+    ]
+  },
+  {
+    "text": "light the mood up",
+    "type": "sentence",
+    "vi_definition": "lam khong khi vui len",
+    "examples": [
+      "A joke can light the mood up."
+    ]
+  }
+]
+```
+
+## Notes
+
+- IDs are first-class: displayed as `Text (ID: n)` for update/delete workflows.
+- `sentence` is supported as a normal type.
+- Type aliases are supported in forms (for example: `adv` -> `adverb`, `adj` -> `adjective`).
