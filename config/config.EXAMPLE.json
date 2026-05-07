@@ -10,10 +10,13 @@
 	"daily_word_channel_id": "PUT DAILY WORD CHANNEL ID HERE",
 	"daily_tense_channel_id": "PUT DAILY TENSE CHANNEL ID HERE",
 	"quiz_channel_id": "PUT QUIZ CHANNEL ID HERE",
+	"tense_quiz_channel_id": "PUT TENSE QUIZ CHANNEL ID HERE",
 	"daily_word_times": ["09:00", "12:00", "16:00"],
 	"daily_tense_time": "09:00",
 	"daily_quiz_time": "20:00",
+	"daily_tense_quiz_time": "20:30",
 	"quiz_question_count": 3,
+	"tense_quiz_question_count": 3,
 	"quiz_typing_repetitions": 3,
 	"db": {
 		"server": "localhost",

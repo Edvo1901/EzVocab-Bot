@@ -119,6 +119,73 @@ BEGIN
 	CREATE UNIQUE INDEX UX_tense_items_normalized_name
 	ON dbo.tense_items(normalized_name);
 END;
+
+IF OBJECT_ID('dbo.tense_quiz_questions', 'U') IS NULL
+BEGIN
+	CREATE TABLE dbo.tense_quiz_questions (
+		id INT IDENTITY(1,1) PRIMARY KEY,
+		sentence NVARCHAR(1000) NOT NULL,
+		option_a NVARCHAR(255) NOT NULL,
+		option_b NVARCHAR(255) NOT NULL,
+		option_c NVARCHAR(255) NOT NULL,
+		option_d NVARCHAR(255) NOT NULL,
+		correct_option CHAR(1) NOT NULL,
+		explanation NVARCHAR(MAX) NOT NULL,
+		created_at DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+		updated_at DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME()
+	);
+END;
+
+IF OBJECT_ID('dbo.tense_quiz_sessions', 'U') IS NULL
+BEGIN
+	CREATE TABLE dbo.tense_quiz_sessions (
+		id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY,
+		channel_id NVARCHAR(64) NOT NULL,
+		status NVARCHAR(20) NOT NULL,
+		current_question_index INT NOT NULL DEFAULT 0,
+		phase NVARCHAR(20) NOT NULL DEFAULT 'mcq',
+		question_count INT NOT NULL DEFAULT 3,
+		created_at DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+		completed_at DATETIME2 NULL
+	);
+END;
+
+IF OBJECT_ID('dbo.tense_quiz_session_items', 'U') IS NULL
+BEGIN
+	CREATE TABLE dbo.tense_quiz_session_items (
+		id INT IDENTITY(1,1) PRIMARY KEY,
+		session_id UNIQUEIDENTIFIER NOT NULL,
+		question_order INT NOT NULL,
+		bank_question_id INT NULL,
+		sentence NVARCHAR(1000) NOT NULL,
+		option_a NVARCHAR(255) NOT NULL,
+		option_b NVARCHAR(255) NOT NULL,
+		option_c NVARCHAR(255) NOT NULL,
+		option_d NVARCHAR(255) NOT NULL,
+		correct_option CHAR(1) NOT NULL,
+		explanation NVARCHAR(MAX) NOT NULL,
+		mcq_answered BIT NOT NULL DEFAULT 0,
+		mcq_is_correct BIT NULL,
+		answered_option CHAR(1) NULL,
+		created_at DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+		CONSTRAINT FK_tense_quiz_items_session FOREIGN KEY (session_id) REFERENCES dbo.tense_quiz_sessions(id),
+		CONSTRAINT FK_tense_quiz_items_bank FOREIGN KEY (bank_question_id) REFERENCES dbo.tense_quiz_questions(id)
+	);
+END;
+
+IF OBJECT_ID('dbo.tense_quiz_attempts', 'U') IS NULL
+BEGIN
+	CREATE TABLE dbo.tense_quiz_attempts (
+		id INT IDENTITY(1,1) PRIMARY KEY,
+		session_id UNIQUEIDENTIFIER NOT NULL,
+		question_order INT NOT NULL,
+		attempt_type NVARCHAR(20) NOT NULL,
+		is_correct BIT NOT NULL,
+		answered_option CHAR(1) NULL,
+		created_at DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+		CONSTRAINT FK_tense_quiz_attempts_session FOREIGN KEY (session_id) REFERENCES dbo.tense_quiz_sessions(id)
+	);
+END;
 `;
 
 async function initializeDatabase() {

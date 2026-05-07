@@ -182,6 +182,49 @@ function dailyTenseEmbed(item) {
 	});
 }
 
+function tenseQuizQuestionEmbed(row) {
+	return createEmbed({
+		color: EMBED_COLORS.info,
+		titleText: `Tense Quiz • Question ${row.currentQuestionIndex + 1}/${row.questionCount}`,
+		description: 'Pick the tense that best matches the sentence.',
+		fields: [
+			{ name: 'Sentence', value: row.sentence },
+			{
+				name: 'Tense options',
+				value: [`A. ${row.optionA}`, `B. ${row.optionB}`, `C. ${row.optionC}`, `D. ${row.optionD}`].join(
+					'\n',
+				),
+			},
+		],
+		footerText: getFooter('Tense Quiz'),
+	});
+}
+
+function tenseQuizFeedbackEmbed({ isCorrect, selectedLabel, correctLabel, explanation }) {
+	const fields = [
+		{ name: 'Your choice', value: selectedLabel || '—', inline: true },
+		{ name: 'Correct tense', value: correctLabel || '—', inline: true },
+		{ name: 'Why', value: explanation || '—' },
+	];
+	return createEmbed({
+		color: isCorrect ? EMBED_COLORS.success : EMBED_COLORS.warning,
+		titleText: isCorrect ? 'Correct' : 'Not quite',
+		description: isCorrect ? 'Nice.' : 'Review the explanation below.',
+		fields,
+		footerText: getFooter('Tense Quiz'),
+	});
+}
+
+function tenseQuizCompletedEmbed(score, questionCount) {
+	return createEmbed({
+		color: EMBED_COLORS.success,
+		titleText: 'Tense Quiz Complete',
+		description: 'Session finished.',
+		fields: [{ name: 'Score', value: `${score}/${questionCount}`, inline: true }],
+		footerText: getFooter('Tense Quiz'),
+	});
+}
+
 module.exports = {
 	dailyWordEmbed,
 	vocabDetailEmbed,
@@ -197,4 +240,7 @@ module.exports = {
 	formatTenseWithId,
 	tenseDetailEmbed,
 	dailyTenseEmbed,
+	tenseQuizQuestionEmbed,
+	tenseQuizFeedbackEmbed,
+	tenseQuizCompletedEmbed,
 };

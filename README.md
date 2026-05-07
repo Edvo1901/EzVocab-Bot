@@ -16,6 +16,7 @@ The bot is built with:
   - typing repetition (3 correct submits per question)
 - Vocabulary management via slash commands + modals
 - Tense/grammar management via slash commands + modals
+- **Tense quiz** (separate from vocab quiz): sentence + four tense labels + explanation; JSON bank; scheduled MCQ-only flow in a dedicated channel
 - Case-insensitive duplicate protection by `(text, type)`
 
 ## Current features
@@ -40,6 +41,7 @@ Developer-only (`developerid` in config):
 - `/test-vocab` - same as scheduled daily word post (uses `daily_word_channel_id`)
 - `/test-tense` - same as scheduled daily tense post (uses `daily_tense_channel_id`)
 - `/test-vocab-quiz` - same as scheduled daily quiz (uses `quiz_channel_id`; skips if a quiz is already active)
+- `/test-tense-quiz` - same as scheduled tense quiz (uses `tense_quiz_channel_id`; skips if a tense quiz is already active there)
 
 ### Tense commands
 
@@ -49,13 +51,15 @@ Developer-only (`developerid` in config):
 - `/search-tense text:<query>` - search tenses by name
 - `/tense-by-id id:<id>` - get full detail for one tense
 - `/import-tense-json file:<attachment>` - bulk tense import from JSON array
+- `/import-tense-quiz-json file:<attachment>` - bulk import tense **quiz** questions (see format below)
 
 ### Scheduling behavior
 
 - Timezone: `Australia/Adelaide`
 - Daily words at `09:00`, `12:00`, `16:00`
 - Daily tense at configured `daily_tense_time` (default `09:00`)
-- Quiz at configured daily quiz time
+- Vocabulary quiz at configured `daily_quiz_time` (channel `quiz_channel_id`)
+- Tense quiz at configured `daily_tense_quiz_time` (channel `tense_quiz_channel_id`; keep separate from vocab quiz channel so both can run)
 - Missed tasks while bot is offline are skipped (no backfill)
 
 ## Setup
@@ -82,12 +86,15 @@ Important keys:
   - `daily_word_channel_id`
   - `daily_tense_channel_id`
   - `quiz_channel_id`
+  - `tense_quiz_channel_id`
   - `botlogs_channel`
 - Scheduler:
   - `timezone`
   - `daily_word_times`
   - `daily_tense_time`
   - `daily_quiz_time`
+  - `daily_tense_quiz_time`
+  - `tense_quiz_question_count`
 - SQL:
   - `db.server`
   - `db.database`
@@ -182,6 +189,28 @@ Use an array of objects:
   }
 ]
 ```
+
+## Tense quiz JSON import format
+
+Use an **array** of objects. Each question has exactly four options in order A–D; `correct_index` is `0`–`3`.
+
+```json
+[
+  {
+    "sentence": "By this time tomorrow, I will have finished the report.",
+    "options": [
+      "Future Perfect",
+      "Future Continuous",
+      "Present Perfect",
+      "Simple Future"
+    ],
+    "correct_index": 0,
+    "explanation": "Future Perfect describes an action that will be completed before a specific future time ('by this time tomorrow')."
+  }
+]
+```
+
+After each answer, the bot replies privately (ephemeral) with feedback, the explanation, and a **Next** button. The final score is posted to the channel when you finish.
 
 ## Notes
 

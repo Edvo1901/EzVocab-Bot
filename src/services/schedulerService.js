@@ -4,6 +4,7 @@ const vocabRepository = require('./db/vocabRepository');
 const tenseRepository = require('./db/tenseRepository');
 const { dailyWordEmbed, dailyTenseEmbed, errorEmbed } = require('./embedTemplates');
 const quizService = require('./quizService');
+const tenseQuizService = require('./tenseQuizService');
 
 const scheduledTasks = [];
 
@@ -72,6 +73,28 @@ async function postDailyQuiz(client) {
 	await quizService.postCurrentQuestion(channel, sessionResult.sessionId);
 }
 
+async function postDailyTenseQuiz(client) {
+	const channelId = config.tense_quiz_channel_id;
+	const channel = await client.channels.fetch(channelId).catch(() => null);
+	if (!channel) {
+		console.warn(`Tense quiz channel ${channelId} not found.`);
+		return;
+	}
+
+	const sessionResult = await tenseQuizService.createTenseQuizSessionForChannel(channelId);
+	if (sessionResult.error) {
+		await channel.send({
+			embeds: [errorEmbed('Tense quiz setup failed', sessionResult.error)],
+		});
+		return;
+	}
+	if (sessionResult.alreadyActive) {
+		return;
+	}
+
+	await tenseQuizService.postCurrentTenseQuestion(channel, sessionResult.sessionId);
+}
+
 async function postDailyTense(client) {
 	const channelId = config.daily_tense_channel_id;
 	const channel = await client.channels.fetch(channelId).catch(() => null);
@@ -97,6 +120,7 @@ async function initialize(client) {
 	const times = config.daily_word_times || ['09:00', '12:00', '16:00'];
 	const tenseTime = config.daily_tense_time || '09:00';
 	const quizTime = config.daily_quiz_time || '20:00';
+	const tenseQuizTime = config.daily_tense_quiz_time || '20:30';
 
 	for (const task of scheduledTasks) {
 		task.stop();
@@ -108,9 +132,10 @@ async function initialize(client) {
 	});
 	scheduleAtTime(tenseTime, timezone, () => postDailyTense(client));
 	scheduleAtTime(quizTime, timezone, () => postDailyQuiz(client));
+	scheduleAtTime(tenseQuizTime, timezone, () => postDailyTenseQuiz(client));
 
 	console.log(
-		`Scheduler armed (${timezone}) | daily words: ${times.join(', ')} | daily tense: ${tenseTime} | quiz: ${quizTime}`,
+		`Scheduler armed (${timezone}) | daily words: ${times.join(', ')} | daily tense: ${tenseTime} | vocab quiz: ${quizTime} | tense quiz: ${tenseQuizTime}`,
 	);
 }
 
@@ -119,4 +144,5 @@ module.exports = {
 	postDailyWord,
 	postDailyTense,
 	postDailyQuiz,
+	postDailyTenseQuiz,
 };
