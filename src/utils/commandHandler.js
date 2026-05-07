@@ -1,0 +1,127 @@
+const { REST, Routes, Collection } = require('discord.js');
+const fs = require('fs');
+const path = require('path');
+const config = require('../../config/config.json');
+const { getcooldownMessages, getdeinMessages } = require('./responseBuilder');
+
+async function loadCommands(client) {
+	const commands = [];
+	const commandPath = path.join(__dirname, '../commands');
+
+	const readFilesRecursively = (dir) => {
+		const files = fs.readdirSync(dir);
+		for (const file of files) {
+			const fullPath = path.join(dir, file);
+			const stat = fs.statSync(fullPath);
+
+			if (stat.isDirectory()) {
+				readFilesRecursively(fullPath);
+			} else if (file.endsWith('.js')) {
+				const command = require(fullPath);
+				if ('data' in command && 'execute' in command) {
+					commands.push(command.data.toJSON());
+					client.commands.set(command.data.name, command);
+				} else {
+					console.error(
+						`Command file at ${file} is missing required properties.`,
+					);
+				}
+			}
+		}
+	};
+
+	readFilesRecursively(commandPath);
+
+	//@note: register commands
+	if (config.deploy_commands) {
+		const rest = new REST().setToken(config.token);
+		try {
+			console.log('Started refreshing application commands.');
+			await rest.put(Routes.applicationCommands(client.user.id), {
+				body: commands,
+			});
+			console.log('Successfully reloaded application commands.');
+		} catch (error) {
+			console.error('Error registering commands:', error);
+		}
+	}
+}
+
+async function synchronizeCommands(interaction, client) {
+	//@note: sanity check
+	if (!interaction.isChatInputCommand()) return;
+
+	const command = client.commands.get(interaction.commandName);
+	if (!command) {
+		return interaction.reply({
+			content: 'Something went wrong.',
+			flags: 64,
+		});
+	}
+
+	if (!interaction.inGuild()) {
+		return interaction.reply({
+			content: 'Commands can only be used on the guild.',
+			flags: 64,
+		});
+	}
+
+	const now = Date.now();
+	const userId = interaction.user.id;
+	const defaultCooldownDuration = 3;
+	const globalCooldownAmount =
+		(command.globalCooldown ?? defaultCooldownDuration) * 1_000;
+
+	// developer only
+	if (command.developer && !config.developerid.includes(userId)) {
+		return interaction.reply({ content: getdeinMessages(), flags: 64 });
+	}
+
+	//@note: server owner only command
+	if (command.owner && interaction.user.id !== interaction.guild.ownerId) {
+		return interaction.reply({
+			content: 'This command is intended for the server owner only.',
+			flags: 64,
+		});
+	}
+
+	//@note: developer group cooldown bypass (uncomment to enable)
+	// if (config.developerid.includes(userId)) {
+	//   try {
+	//     await command.execute(interaction);
+	//   } catch (error) {
+	//     console.error('Error executing command:', error);
+	//   }
+	//   return; // exit
+	// }
+
+	const globalCooldowns = client.globalCooldowns || new Collection();
+	client.globalCooldowns = globalCooldowns;
+
+	if (globalCooldowns.has(userId)) {
+		const expirationTime = globalCooldowns.get(userId) + globalCooldownAmount;
+
+		if (now < expirationTime) {
+			const remainingTime = Math.ceil((expirationTime - now) / 1_000);
+			return interaction.reply({
+				content: getcooldownMessages().replace(
+					'${remainingTime}',
+					remainingTime,
+				),
+				flags: 64,
+			});
+		}
+	}
+
+	//@note: update global cooldowns table
+	globalCooldowns.set(userId, now);
+	setTimeout(() => globalCooldowns.delete(userId), globalCooldownAmount);
+
+	try {
+		await command.execute(interaction);
+	} catch (error) {
+		console.error('Error executing command:', error);
+	}
+}
+
+module.exports = { loadCommands, synchronizeCommands };

@@ -1,0 +1,25 @@
+{
+	"name": "EzVocab",
+	"version": "1.0.0",
+	"description": "",
+	"main": "bootstrap.js",
+	"scripts": {
+		"start": "node bootstrap.js",
+		"format": "prettier --write \"**/*.js\""
+	},
+	"keywords": [],
+	"author": "Maybe",
+	"license": "MIT",
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"discord.js": "^14.26.0",
+		"mssql": "^11.0.1",
+		"node-fetch": "^3.3.2",
+		"node-cron": "^3.0.3",
+		"systeminformation": "^5.30.8",
+		"uuid": "^10.0.0"
+	},
+	"devDependencies": {
+		"prettier": "^3.3.3"
+	}
+}

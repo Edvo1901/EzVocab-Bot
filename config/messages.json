@@ -1,0 +1,33 @@
+{
+	"cooldownMessages": [
+		"Take it easy! Don’t send commands too quickly—you need to wait ${remainingTime} seconds.",
+		"Slow down! You must wait ${remainingTime} seconds before you can send the command again.",
+		"Relax! You're on cooldown—no commands for ${remainingTime} seconds.",
+		"Calm down! You're on cooldown, so please wait ${remainingTime} seconds before trying again.",
+		"Chill out! You're on cooldown, so avoid sending commands for ${remainingTime} seconds.",
+		"Take a deep breath! You're on cooldown for ${remainingTime} seconds, so no commands for now.",
+		"Take it easy! You're on cooldown—wait ${remainingTime} seconds before sending more commands.",
+		"Calm down and wait! You're on cooldown for ${remainingTime} seconds.",
+		"Stay calm! You're on cooldown, so wait ${remainingTime} seconds before sending commands.",
+		"Hold your horses! You're on cooldown—please wait ${remainingTime} seconds before sending more commands."
+	],
+	"deinMessages": [
+		"Sorry, you don't have the necessary permissions to execute this command.",
+		"You lack the required permissions to use this command.",
+		"Access denied! You cannot execute this command.",
+		"Unfortunately, you don't have the required permissions to perform this action.",
+		"You do not have the appropriate permissions to use this command.",
+		"Access forbidden! You need the proper permissions to execute this command.",
+		"Your permissions are insufficient to execute this command.",
+		"You cannot execute this command because you lack the necessary permissions.",
+		"You do not have the required permissions to perform this command.",
+		"You need additional permissions to execute this command."
+	],
+	"MentionMessages": [
+		"Seriously? I have better things to do.",
+		"Me again?",
+		"Great that you tagged me. Now rethink your life and consider if that was really necessary.",
+		"Well, someone really has nothing to do if they have to call me.",
+		"What is it this time?"
+	]
+}

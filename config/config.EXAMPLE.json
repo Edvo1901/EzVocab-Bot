@@ -1,0 +1,25 @@
+{
+	"token": "PUT BOT TOKEN HERE",
+	"bot_color": "#5865F2",
+	"bot_name": "[EzVocabBot]",
+	"bot_name2": "EzVocabBot",
+	"botlogs_channel": "PUT BOT LOG CHANNEL ID HERE",
+	"developerid": ["PUT YOUR DISCORD USER ID HERE"],
+	"deploy_commands": true,
+	"timezone": "Australia/Adelaide",
+	"daily_word_channel_id": "PUT DAILY WORD CHANNEL ID HERE",
+	"quiz_channel_id": "PUT QUIZ CHANNEL ID HERE",
+	"daily_word_times": ["09:00", "12:00", "16:00"],
+	"daily_quiz_time": "20:00",
+	"quiz_question_count": 3,
+	"quiz_typing_repetitions": 3,
+	"db": {
+		"server": "localhost",
+		"database": "EzVocab",
+		"user": "sa",
+		"password": "PUT SQL PASSWORD HERE",
+		"port": 1433,
+		"encrypt": false,
+		"trustServerCertificate": true
+	}
+}
