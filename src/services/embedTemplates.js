@@ -149,6 +149,39 @@ function quizCompletedEmbed(score, questionCount) {
 	});
 }
 
+function formatTenseWithId(item) {
+	return `${item.name} (ID: ${item.id})`;
+}
+
+function tenseDetailEmbed(item, title = 'Tense Detail', color = EMBED_COLORS.info) {
+	return createEmbed({
+		color,
+		titleText: title,
+		fields: [
+			{ name: 'Tense', value: formatTenseWithId(item) },
+			{ name: 'Sentence Structure', value: item.structure },
+			{ name: 'When to use', value: item.usageNote },
+			{ name: 'Examples', value: formatExamples(item.examples) },
+		],
+		footerText: getFooter(`ID: ${item.id}`),
+	});
+}
+
+function dailyTenseEmbed(item) {
+	return createEmbed({
+		color: EMBED_COLORS.info,
+		titleText: 'Daily Tense',
+		description: 'One tense a day keeps grammar confusion away.',
+		fields: [
+			{ name: 'Tense', value: formatTenseWithId(item) },
+			{ name: 'Sentence Structure', value: item.structure },
+			{ name: 'When to use', value: item.usageNote },
+			{ name: 'Examples', value: formatExamples(item.examples) },
+		],
+		footerText: getFooter('Daily Tense'),
+	});
+}
+
 module.exports = {
 	dailyWordEmbed,
 	vocabDetailEmbed,
@@ -161,4 +194,7 @@ module.exports = {
 	quizTypingProgressEmbed,
 	quizCompletedEmbed,
 	formatWordWithId,
+	formatTenseWithId,
+	tenseDetailEmbed,
+	dailyTenseEmbed,
 };

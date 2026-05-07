@@ -15,6 +15,7 @@ The bot is built with:
   - type-matching distractors (noun with noun, sentence with sentence, etc.)
   - typing repetition (3 correct submits per question)
 - Vocabulary management via slash commands + modals
+- Tense/grammar management via slash commands + modals
 - Case-insensitive duplicate protection by `(text, type)`
 
 ## Current features
@@ -34,10 +35,20 @@ The bot is built with:
 - `/daily-now` - trigger a daily word immediately
 - `/schedule-status` - view scheduler settings
 
+### Tense commands
+
+- `/add-tense` - open modal and add one tense item
+- `/update-tense id:<id>` - update an existing tense entry
+- `/delete-tense id:<id>` - hard delete tense by ID
+- `/search-tense text:<query>` - search tenses by name
+- `/tense-by-id id:<id>` - get full detail for one tense
+- `/import-tense-json file:<attachment>` - bulk tense import from JSON array
+
 ### Scheduling behavior
 
 - Timezone: `Australia/Adelaide`
 - Daily words at `09:00`, `12:00`, `16:00`
+- Daily tense at configured `daily_tense_time` (default `09:00`)
 - Quiz at configured daily quiz time
 - Missed tasks while bot is offline are skipped (no backfill)
 
@@ -63,11 +74,13 @@ Important keys:
 - Discord:
   - `token`
   - `daily_word_channel_id`
+  - `daily_tense_channel_id`
   - `quiz_channel_id`
   - `botlogs_channel`
 - Scheduler:
   - `timezone`
   - `daily_word_times`
+  - `daily_tense_time`
   - `daily_quiz_time`
 - SQL:
   - `db.server`
@@ -132,6 +145,33 @@ Use an array of objects:
     "vi_definition": "lam khong khi vui len",
     "examples": [
       "A joke can light the mood up."
+    ]
+  }
+]
+```
+
+## Tense JSON import format
+
+Use an array of objects:
+
+```json
+[
+  {
+    "name": "Simple Past",
+    "structure": "S + V2/ed",
+    "usage_note": "Used for completed actions in the past.",
+    "examples": [
+      "I visited my friend yesterday.",
+      "She finished her homework last night."
+    ]
+  },
+  {
+    "name": "Past Continuous",
+    "structure": "S + was/were + V-ing",
+    "usage_note": "Used for an action in progress at a specific time in the past.",
+    "examples": [
+      "I was studying at 8 PM.",
+      "They were playing football when it started to rain."
     ]
   }
 ]

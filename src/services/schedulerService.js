@@ -1,7 +1,8 @@
 const cron = require('node-cron');
 const config = require('../../config/config.json');
 const vocabRepository = require('./db/vocabRepository');
-const { dailyWordEmbed, errorEmbed } = require('./embedTemplates');
+const tenseRepository = require('./db/tenseRepository');
+const { dailyWordEmbed, dailyTenseEmbed, errorEmbed } = require('./embedTemplates');
 const quizService = require('./quizService');
 
 const scheduledTasks = [];
@@ -71,9 +72,30 @@ async function postDailyQuiz(client) {
 	await quizService.postCurrentQuestion(channel, sessionResult.sessionId);
 }
 
+async function postDailyTense(client) {
+	const channelId = config.daily_tense_channel_id;
+	const channel = await client.channels.fetch(channelId).catch(() => null);
+	if (!channel) {
+		console.warn(`Daily tense channel ${channelId} not found.`);
+		return;
+	}
+
+	const item = await tenseRepository.getRandomTenseItem();
+	if (!item) {
+		await channel.send({
+			embeds: [errorEmbed('No tense found', 'Add tense records before running daily tense.')],
+		});
+		return;
+	}
+
+	await channel.send({ embeds: [dailyTenseEmbed(item)] });
+	await tenseRepository.markAsShowed(item.id);
+}
+
 async function initialize(client) {
 	const timezone = config.timezone || 'Australia/Adelaide';
 	const times = config.daily_word_times || ['09:00', '12:00', '16:00'];
+	const tenseTime = config.daily_tense_time || '09:00';
 	const quizTime = config.daily_quiz_time || '20:00';
 
 	for (const task of scheduledTasks) {
@@ -84,15 +106,17 @@ async function initialize(client) {
 	times.forEach((time) => {
 		scheduleAtTime(time, timezone, () => postDailyWord(client));
 	});
+	scheduleAtTime(tenseTime, timezone, () => postDailyTense(client));
 	scheduleAtTime(quizTime, timezone, () => postDailyQuiz(client));
 
 	console.log(
-		`Scheduler armed (${timezone}) | daily words: ${times.join(', ')} | quiz: ${quizTime}`,
+		`Scheduler armed (${timezone}) | daily words: ${times.join(', ')} | daily tense: ${tenseTime} | quiz: ${quizTime}`,
 	);
 }
 
 module.exports = {
 	initialize,
 	postDailyWord,
+	postDailyTense,
 	postDailyQuiz,
 };

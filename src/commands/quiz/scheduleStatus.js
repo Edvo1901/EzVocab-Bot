@@ -11,6 +11,7 @@ module.exports = {
 		const lines = [
 			`Timezone: ${config.timezone || 'Australia/Adelaide'}`,
 			`Daily word runs: ${(config.daily_word_times || ['09:00', '12:00', '16:00']).join(', ')}`,
+			`Daily tense run: ${config.daily_tense_time || '09:00'} -> channel ${config.daily_tense_channel_id || 'not set'}`,
 			`Daily quiz run: ${config.daily_quiz_time || '20:00'}`,
 			`Policy: Skip missed runs when bot is offline.`,
 		];
