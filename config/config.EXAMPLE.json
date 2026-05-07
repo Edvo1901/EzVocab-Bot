@@ -5,6 +5,7 @@
 	"bot_name2": "EzVocabBot",
 	"botlogs_channel": "PUT BOT LOG CHANNEL ID HERE",
 	"developerid": ["PUT YOUR DISCORD USER ID HERE"],
+	"debug": false,
 	"deploy_commands": true,
 	"timezone": "Australia/Adelaide",
 	"daily_word_channel_id": "PUT DAILY WORD CHANNEL ID HERE",

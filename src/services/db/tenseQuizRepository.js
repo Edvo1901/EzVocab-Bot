@@ -1,4 +1,4 @@
-const { randomUUID } = require('uuid');
+const { randomUUID } = require('crypto');
 const { getPool, sql } = require('./sqlClient');
 
 function mapBankRow(row) {

@@ -31,6 +31,12 @@ async function loadCommands(client) {
 	};
 
 	readFilesRecursively(commandPath);
+	if (config.debug === true) {
+		const loadedCommandNames = [...client.commands.keys()].sort();
+		console.log(
+			`Loaded ${loadedCommandNames.length} command(s): ${loadedCommandNames.map((name) => `/${name}`).join(', ')}`,
+		);
+	}
 
 	//@note: register commands
 	if (config.deploy_commands) {
