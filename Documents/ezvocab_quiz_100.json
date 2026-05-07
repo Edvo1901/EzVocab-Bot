@@ -1,0 +1,1102 @@
+[
+  {
+    "sentence": "The world population will increase significantly.",
+    "options": [
+      "Future Simple (Tương lai đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Past Simple (Quá khứ đơn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Dự đoán về tương lai."
+  },
+  {
+    "sentence": "The ground was wet because it had been raining.",
+    "options": [
+      "Future Simple (Tương lai đơn)",
+      "Present Simple (Hiện tại đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Past Simple (Quá khứ đơn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Kết quả trong quá khứ của một hành động kéo dài trước đó."
+  },
+  {
+    "sentence": "Don't call me at 8; I will be watching the game.",
+    "options": [
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Past Simple (Quá khứ đơn)",
+      "Present Simple (Hiện tại đơn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Hành động đang diễn ra nên không muốn bị làm phiền."
+  },
+  {
+    "sentence": "We met at a cafe two days ago.",
+    "options": [
+      "Past Simple (Quá khứ đơn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Hành động kết thúc trong quá khứ (dấu hiệu: 'ago')."
+  },
+  {
+    "sentence": "He had been waiting for 20 minutes when the bus finally came.",
+    "options": [
+      "Past Simple (Quá khứ đơn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Khoảng thời gian của hành động trước một hành động khác."
+  },
+  {
+    "sentence": "She will be sleeping when you arrive.",
+    "options": [
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Present Simple (Hiện tại đơn)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Future Perfect (Tương lai hoàn thành)"
+    ],
+    "correct_index": 0,
+    "explanation": "Hành động đang diễn ra thì bị hành động khác xen vào trong tương lai."
+  },
+  {
+    "sentence": "I had been looking for my phone for hours.",
+    "options": [
+      "Future Simple (Tương lai đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)"
+    ],
+    "correct_index": 1,
+    "explanation": "Nhấn mạnh sự nỗ lực kéo dài trong quá khứ."
+  },
+  {
+    "sentence": "If I had known, I would have told you.",
+    "options": [
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Câu điều kiện loại 3 (quá khứ của quá khứ)."
+  },
+  {
+    "sentence": "They traveled to Japan in 2019.",
+    "options": [
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Past Simple (Quá khứ đơn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Hành động xảy ra tại một thời điểm cụ thể trong quá khứ."
+  },
+  {
+    "sentence": "I will have been waiting for half an hour when the bus arrives.",
+    "options": [
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Future Simple (Tương lai đơn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Khoảng thời gian chờ đợi tính đến mốc tương lai."
+  },
+  {
+    "sentence": "The plane had taken off by 7 AM.",
+    "options": [
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)"
+    ],
+    "correct_index": 3,
+    "explanation": "Hoàn thành trước mốc thời gian cụ thể trong quá khứ."
+  },
+  {
+    "sentence": "He has been feeling unwell lately.",
+    "options": [
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Future Simple (Tương lai đơn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hành động kéo dài gần đây (dấu hiệu: 'lately')."
+  },
+  {
+    "sentence": "By tomorrow morning, it will have been snowing for two days.",
+    "options": [
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Present Simple (Hiện tại đơn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Sự kéo dài của hiện tượng thời tiết tính đến tương lai."
+  },
+  {
+    "sentence": "I bought this car last month.",
+    "options": [
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Past Simple (Quá khứ đơn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Thời điểm cụ thể trong quá khứ (dấu hiệu: 'last month')."
+  },
+  {
+    "sentence": "I will call you as soon as I arrive.",
+    "options": [
+      "Future Simple (Tương lai đơn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Present Perfect (Hiện tại hoàn thành)"
+    ],
+    "correct_index": 0,
+    "explanation": "Lời hứa hoặc hành động trong tương lai."
+  },
+  {
+    "sentence": "Cats like to sleep a lot.",
+    "options": [
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Simple (Hiện tại đơn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Diễn tả đặc điểm, bản chất của sự vật."
+  },
+  {
+    "sentence": "He hasn't called me yet.",
+    "options": [
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Past Simple (Quá khứ đơn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Hành động chưa xảy ra tính đến hiện tại (dấu hiệu: 'yet')."
+  },
+  {
+    "sentence": "In two years' time, we will have built our new home.",
+    "options": [
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Sự hoàn thành trong một khoảng thời gian."
+  },
+  {
+    "sentence": "By next year, I will have finished my degree.",
+    "options": [
+      "Past Simple (Quá khứ đơn)",
+      "Future Simple (Tương lai đơn)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)"
+    ],
+    "correct_index": 3,
+    "explanation": "Hành động hoàn thành trước một mốc thời gian tương lai (dấu hiệu: 'By')."
+  },
+  {
+    "sentence": "They have been playing games since 2 PM.",
+    "options": [
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Present Simple (Hiện tại đơn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)"
+    ],
+    "correct_index": 2,
+    "explanation": "Nhấn mạnh thời gian bắt đầu và kéo dài đến nay (dấu hiệu: 'since')."
+  },
+  {
+    "sentence": "She will have cleaned the house by the time you return.",
+    "options": [
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Future Continuous (Tương lai tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Hành động hoàn thành trước một hành động khác trong tương lai."
+  },
+  {
+    "sentence": "They had been living in that house for years before they sold it.",
+    "options": [
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Present Simple (Hiện tại đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Sự kéo dài của hành động trước một mốc thời gian."
+  },
+  {
+    "sentence": "She was tired because she had been working all day.",
+    "options": [
+      "Present Simple (Hiện tại đơn)",
+      "Future Simple (Tương lai đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Nhấn mạnh nguyên nhân của một tình trạng trong quá khứ."
+  },
+  {
+    "sentence": "I will be 25 years old next year.",
+    "options": [
+      "Future Simple (Tương lai đơn)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Sự thật hiển nhiên trong tương lai."
+  },
+  {
+    "sentence": "I saw a great movie last night.",
+    "options": [
+      "Past Simple (Quá khứ đơn)",
+      "Present Simple (Hiện tại đơn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Hành động đã kết thúc trong quá khứ (dấu hiệu: 'last night')."
+  },
+  {
+    "sentence": "Listen! Someone is singing in the shower.",
+    "options": [
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Continuous (Hiện tại tiếp diễn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Hành động đang xảy ra (dấu hiệu: 'Listen!')."
+  },
+  {
+    "sentence": "I will have saved $5000 by December.",
+    "options": [
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Past Simple (Quá khứ đơn)",
+      "Past Continuous (Quá khứ tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Mục tiêu hoàn thành trước thời hạn."
+  },
+  {
+    "sentence": "The sun was shining and the birds were singing.",
+    "options": [
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Past Simple (Quá khứ đơn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Present Continuous (Hiện tại tiếp diễn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Miêu tả bối cảnh trong một câu chuyện."
+  },
+  {
+    "sentence": "She has been learning English for five years.",
+    "options": [
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Nhấn mạnh quá trình học tập kéo dài."
+  },
+  {
+    "sentence": "She has visited Paris three times.",
+    "options": [
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Diễn tả trải nghiệm trong quá khứ tính đến hiện tại."
+  },
+  {
+    "sentence": "We are meeting our clients tomorrow afternoon.",
+    "options": [
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Simple (Hiện tại đơn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Diễn tả một kế hoạch đã được sắp xếp trong tương lai gần."
+  },
+  {
+    "sentence": "I usually go to bed at 10 PM.",
+    "options": [
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Present Simple (Hiện tại đơn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Diễn tả thói quen hoặc hành động lặp đi lặp lại ở hiện tại."
+  },
+  {
+    "sentence": "I won't have finished the book until next week.",
+    "options": [
+      "Past Simple (Quá khứ đơn)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Simple (Hiện tại đơn)",
+      "Future Perfect (Tương lai hoàn thành)"
+    ],
+    "correct_index": 3,
+    "explanation": "Sự hoàn thành (phủ định) đến một thời điểm."
+  },
+  {
+    "sentence": "Why are you wearing a coat indoors?",
+    "options": [
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Past Simple (Quá khứ đơn)",
+      "Future Simple (Tương lai đơn)",
+      "Future Perfect (Tương lai hoàn thành)"
+    ],
+    "correct_index": 0,
+    "explanation": "Hành động đang diễn ra tại thời điểm nói."
+  },
+  {
+    "sentence": "Did you do your homework yesterday?",
+    "options": [
+      "Past Simple (Quá khứ đơn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Câu nghi vấn quá khứ đơn (dấu hiệu: 'yesterday')."
+  },
+  {
+    "sentence": "Is she working late today?",
+    "options": [
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Continuous (Hiện tại tiếp diễn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Hành động mang tính chất tạm thời."
+  },
+  {
+    "sentence": "I am studying for my IELTS exam right now.",
+    "options": [
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Present Continuous (Hiện tại tiếp diễn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Hành động đang diễn ra tại thời điểm nói (dấu hiệu: 'right now')."
+  },
+  {
+    "sentence": "Columbus discovered America in 1492.",
+    "options": [
+      "Past Simple (Quá khứ đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Sự thật lịch sử."
+  },
+  {
+    "sentence": "They will have been traveling for 24 hours by the time they arrive.",
+    "options": [
+      "Future Perfect (Tương lai hoàn thành)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Nhấn mạnh quá trình di chuyển kéo dài."
+  },
+  {
+    "sentence": "By 2030, technology will have changed the world.",
+    "options": [
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Dự đoán về sự hoàn thành trong tương lai."
+  },
+  {
+    "sentence": "She works as a nurse in a local hospital.",
+    "options": [
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Present Simple (Hiện tại đơn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Diễn tả nghề nghiệp hoặc trạng thái ổn định ở hiện tại."
+  },
+  {
+    "sentence": "By 5 PM, I will have been working for 8 hours.",
+    "options": [
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Future Simple (Tương lai đơn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Nhấn mạnh khoảng thời gian kéo dài của hành động đến một mốc tương lai."
+  },
+  {
+    "sentence": "How long will you have been living abroad by then?",
+    "options": [
+      "Future Simple (Tương lai đơn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hỏi về độ dài thời gian tính đến một mốc tương lai."
+  },
+  {
+    "sentence": "What were you doing when I called you?",
+    "options": [
+      "Future Simple (Tương lai đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hành động đang diễn ra tại một thời điểm quá khứ."
+  },
+  {
+    "sentence": "I have lost my keys.",
+    "options": [
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Perfect (Hiện tại hoàn thành)"
+    ],
+    "correct_index": 3,
+    "explanation": "Hành động vừa mới xảy ra hoặc không rõ thời gian, để lại kết quả ở hiện tại."
+  },
+  {
+    "sentence": "I had never seen such a beautiful sunset before.",
+    "options": [
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)"
+    ],
+    "correct_index": 3,
+    "explanation": "Trải nghiệm tính đến một thời điểm trong quá khứ."
+  },
+  {
+    "sentence": "I have been waiting for you for two hours.",
+    "options": [
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Future Simple (Tương lai đơn)",
+      "Past Simple (Quá khứ đơn)",
+      "Future Continuous (Tương lai tiếp diễn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Nhấn mạnh tính liên tục của hành động kéo dài từ quá khứ đến hiện tại (dấu hiệu: 'for')."
+  },
+  {
+    "sentence": "The price of gas has increased recently.",
+    "options": [
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Past Simple (Quá khứ đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Hành động xảy ra gần đây (dấu hiệu: 'recently')."
+  },
+  {
+    "sentence": "It has been raining all morning.",
+    "options": [
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Future Simple (Tương lai đơn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Nhấn mạnh sự kéo dài của hành động (dấu hiệu: 'all morning')."
+  },
+  {
+    "sentence": "He will probably be late for the meeting.",
+    "options": [
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Future Simple (Tương lai đơn)",
+      "Past Perfect (Quá khứ hoàn thành)"
+    ],
+    "correct_index": 2,
+    "explanation": "Dự đoán với trạng từ 'probably'."
+  },
+  {
+    "sentence": "We have lived here since 2010.",
+    "options": [
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)"
+    ],
+    "correct_index": 1,
+    "explanation": "Hành động bắt đầu trong quá khứ và kéo dài đến hiện tại (dấu hiệu: 'since')."
+  },
+  {
+    "sentence": "Was it raining when you left the house?",
+    "options": [
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Past Simple (Quá khứ đơn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Hỏi về hành động đang diễn ra trong quá khứ."
+  },
+  {
+    "sentence": "He didn't come to the party on Saturday.",
+    "options": [
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Past Simple (Quá khứ đơn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Câu phủ định quá khứ đơn."
+  },
+  {
+    "sentence": "They had been playing for an hour before it started raining.",
+    "options": [
+      "Future Simple (Tương lai đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Past Simple (Quá khứ đơn)",
+      "Past Continuous (Quá khứ tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Hành động kéo dài liên tục trước một thời điểm quá khứ."
+  },
+  {
+    "sentence": "Look! The bus is coming.",
+    "options": [
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Future Simple (Tương lai đơn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hành động đang xảy ra tại thời điểm nói (dấu hiệu: 'Look!')."
+  },
+  {
+    "sentence": "This time next week, we will be lying on the beach.",
+    "options": [
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Past Continuous (Quá khứ tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Hành động đang diễn ra trong tương lai (dấu hiệu: 'This time next week')."
+  },
+  {
+    "sentence": "How long have you been studying today?",
+    "options": [
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Future Simple (Tương lai đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Hỏi về khoảng thời gian của hành động đang diễn ra."
+  },
+  {
+    "sentence": "Will you be using your car tomorrow?",
+    "options": [
+      "Future Perfect (Tương lai hoàn thành)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Simple (Hiện tại đơn)",
+      "Future Continuous (Tương lai tiếp diễn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Hỏi về kế hoạch của người khác một cách lịch sự."
+  },
+  {
+    "sentence": "Why are your hands dirty? I have been working in the garden.",
+    "options": [
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hành động kéo dài vừa mới kết thúc và để lại kết quả."
+  },
+  {
+    "sentence": "The movie had started before we arrived.",
+    "options": [
+      "Future Perfect (Tương lai hoàn thành)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Past Simple (Quá khứ đơn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hành động xảy ra trước một hành động khác trong quá khứ."
+  },
+  {
+    "sentence": "They had lived in Spain before moving to France.",
+    "options": [
+      "Present Simple (Hiện tại đơn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hành động xảy ra trước một sự kiện quá khứ khác."
+  },
+  {
+    "sentence": "Perhaps we will meet again someday.",
+    "options": [
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Simple (Tương lai đơn)",
+      "Present Simple (Hiện tại đơn)",
+      "Past Simple (Quá khứ đơn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Khả năng trong tương lai (dấu hiệu: 'Perhaps')."
+  },
+  {
+    "sentence": "By the time he retires, he will have been working for 40 years.",
+    "options": [
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Simple (Hiện tại đơn)",
+      "Present Perfect (Hiện tại hoàn thành)"
+    ],
+    "correct_index": 0,
+    "explanation": "Hành động kéo dài tính đến một sự kiện tương lai."
+  },
+  {
+    "sentence": "I was watching TV when the phone rang.",
+    "options": [
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Continuous (Hiện tại tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hành động đang diễn ra thì có hành động khác xen vào."
+  },
+  {
+    "sentence": "She finished her work, packed her bag, and left.",
+    "options": [
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Past Simple (Quá khứ đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Present Simple (Hiện tại đơn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Các hành động xảy ra liên tiếp trong quá khứ."
+  },
+  {
+    "sentence": "By the time I got home, everyone had gone to bed.",
+    "options": [
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Future Perfect (Tương lai hoàn thành)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hành động hoàn thành trước một mốc thời gian quá khứ (dấu hiệu: 'By the time')."
+  },
+  {
+    "sentence": "Will you marry me?",
+    "options": [
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Present Simple (Hiện tại đơn)",
+      "Future Simple (Tương lai đơn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Lời đề nghị hoặc yêu cầu."
+  },
+  {
+    "sentence": "The movie will have started before we get to the cinema.",
+    "options": [
+      "Future Perfect (Tương lai hoàn thành)",
+      "Past Simple (Quá khứ đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Hành động xảy ra trước một sự kiện tương lai."
+  },
+  {
+    "sentence": "We don't live in London anymore.",
+    "options": [
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Present Simple (Hiện tại đơn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Câu phủ định diễn tả một sự thật ở hiện tại."
+  },
+  {
+    "sentence": "The earth revolves around the sun.",
+    "options": [
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Future Simple (Tương lai đơn)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Present Simple (Hiện tại đơn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Diễn tả một chân lý hoặc sự thật hiển nhiên."
+  },
+  {
+    "sentence": "Wait! I will help you with those bags.",
+    "options": [
+      "Future Perfect (Tương lai hoàn thành)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Future Simple (Tương lai đơn)",
+      "Present Perfect (Hiện tại hoàn thành)"
+    ],
+    "correct_index": 2,
+    "explanation": "Quyết định ngay tại thời điểm nói."
+  },
+  {
+    "sentence": "She told me she had already finished the report.",
+    "options": [
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)"
+    ],
+    "correct_index": 3,
+    "explanation": "Hành động xảy ra trước thời điểm nói trong quá khứ."
+  },
+  {
+    "sentence": "Will you have completed the task by 5 PM?",
+    "options": [
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)"
+    ],
+    "correct_index": 0,
+    "explanation": "Hỏi về sự hoàn thành trước mốc thời gian."
+  },
+  {
+    "sentence": "They weren't paying attention during the lecture.",
+    "options": [
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Simple (Hiện tại đơn)",
+      "Future Perfect (Tương lai hoàn thành)"
+    ],
+    "correct_index": 1,
+    "explanation": "Hành động không được thực hiện tại một thời điểm quá khứ."
+  },
+  {
+    "sentence": "In June, she will have been teaching here for 10 years.",
+    "options": [
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Past Simple (Quá khứ đơn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)"
+    ],
+    "correct_index": 0,
+    "explanation": "Nhấn mạnh sự liên tục của hành động tính đến tương lai."
+  },
+  {
+    "sentence": "I was dreaming about flying when I woke up.",
+    "options": [
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Perfect (Hiện tại hoàn thành)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hành động đang diễn ra thì bị cắt ngang."
+  },
+  {
+    "sentence": "Have you ever eaten sushi?",
+    "options": [
+      "Past Simple (Quá khứ đơn)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Hỏi về trải nghiệm (dấu hiệu: 'ever')."
+  },
+  {
+    "sentence": "Does he play the guitar?",
+    "options": [
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Simple (Hiện tại đơn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Câu nghi vấn ở thì hiện tại đơn với trợ động từ 'Does'."
+  },
+  {
+    "sentence": "At 10 AM tomorrow, I will be working.",
+    "options": [
+      "Future Simple (Tương lai đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hành động đang diễn ra tại một thời điểm cụ thể trong tương lai."
+  },
+  {
+    "sentence": "Water freezes at 0 degrees Celsius.",
+    "options": [
+      "Future Simple (Tương lai đơn)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Simple (Hiện tại đơn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Sự thật hiển nhiên/chân lý."
+  },
+  {
+    "sentence": "We had been driving for miles when we ran out of gas.",
+    "options": [
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hành động đang kéo dài thì bị cắt ngang bởi sự kiện khác."
+  },
+  {
+    "sentence": "They will be traveling across Europe all summer.",
+    "options": [
+      "Present Simple (Hiện tại đơn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Past Simple (Quá khứ đơn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Hành động kéo dài trong một khoảng thời gian tương lai."
+  },
+  {
+    "sentence": "I'll be thinking of you during the exam.",
+    "options": [
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Past Continuous (Quá khứ tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Hành động diễn ra song song hoặc kéo dài."
+  },
+  {
+    "sentence": "By the end of the month, they will have moved out.",
+    "options": [
+      "Future Perfect (Tương lai hoàn thành)",
+      "Past Simple (Quá khứ đơn)",
+      "Present Simple (Hiện tại đơn)",
+      "Past Perfect (Quá khứ hoàn thành)"
+    ],
+    "correct_index": 0,
+    "explanation": "Hành động kết thúc trước cuối tháng."
+  },
+  {
+    "sentence": "We have been planning this trip for months.",
+    "options": [
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Present Continuous (Hiện tại tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Hành động lặp lại và kéo dài."
+  },
+  {
+    "sentence": "In August, they will have been married for 50 years.",
+    "options": [
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+      "Future Continuous (Tương lai tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Nhấn mạnh sự liên tục của trạng thái/hành động."
+  },
+  {
+    "sentence": "They are building a new bridge over the river.",
+    "options": [
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Future Simple (Tương lai đơn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hành động đang diễn ra xung quanh thời điểm nói."
+  },
+  {
+    "sentence": "She was cooking while he was washing the car.",
+    "options": [
+      "Present Simple (Hiện tại đơn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Past Continuous (Quá khứ tiếp diễn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Hai hành động xảy ra song song trong quá khứ (dấu hiệu: 'while')."
+  },
+  {
+    "sentence": "I will be seeing her at the office tomorrow.",
+    "options": [
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Hành động sẽ xảy ra theo dự kiến."
+  },
+  {
+    "sentence": "My father reads the newspaper every morning.",
+    "options": [
+      "Future Simple (Tương lai đơn)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Present Simple (Hiện tại đơn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Thói quen hàng ngày với trạng từ 'every morning'."
+  },
+  {
+    "sentence": "He is always losing his keys!",
+    "options": [
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)"
+    ],
+    "correct_index": 0,
+    "explanation": "Diễn tả sự phàn nàn về một thói quen xấu (đi kèm 'always')."
+  },
+  {
+    "sentence": "I think it will rain tomorrow.",
+    "options": [
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Future Simple (Tương lai đơn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Dự đoán không có căn cứ xác thực (dấu hiệu: 'I think')."
+  },
+  {
+    "sentence": "When I was a child, I played the piano.",
+    "options": [
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Past Simple (Quá khứ đơn)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Present Continuous (Hiện tại tiếp diễn)"
+    ],
+    "correct_index": 1,
+    "explanation": "Thói quen hoặc tình trạng trong quá khứ."
+  },
+  {
+    "sentence": "I won't tell anyone your secret.",
+    "options": [
+      "Future Simple (Tương lai đơn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Perfect (Hiện tại hoàn thành)"
+    ],
+    "correct_index": 0,
+    "explanation": "Lời hứa (phủ định)."
+  },
+  {
+    "sentence": "I have seen that movie before.",
+    "options": [
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)"
+    ],
+    "correct_index": 1,
+    "explanation": "Diễn tả trải nghiệm (dấu hiệu: 'before')."
+  },
+  {
+    "sentence": "They have just finished their dinner.",
+    "options": [
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Present Perfect (Hiện tại hoàn thành)",
+      "Future Simple (Tương lai đơn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hành động vừa mới hoàn thành (dấu hiệu: 'just')."
+  },
+  {
+    "sentence": "They were having dinner at 8 PM yesterday.",
+    "options": [
+      "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Past Perfect (Quá khứ hoàn thành)",
+      "Future Perfect (Tương lai hoàn thành)"
+    ],
+    "correct_index": 1,
+    "explanation": "Hành động đang xảy ra tại thời điểm cụ thể trong quá khứ."
+  },
+  {
+    "sentence": "How long had you been studying before the exam?",
+    "options": [
+      "Future Continuous (Tương lai tiếp diễn)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+      "Future Simple (Tương lai đơn)"
+    ],
+    "correct_index": 2,
+    "explanation": "Hỏi về độ dài của hành động trước một mốc quá khứ."
+  },
+  {
+    "sentence": "The train leaves at 8:00 AM tomorrow.",
+    "options": [
+      "Future Perfect (Tương lai hoàn thành)",
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Present Simple (Hiện tại đơn)"
+    ],
+    "correct_index": 3,
+    "explanation": "Diễn tả lịch trình, thời khóa biểu đã được sắp đặt."
+  },
+  {
+    "sentence": "He realized he had forgotten his passport.",
+    "options": [
+      "Past Continuous (Quá khứ tiếp diễn)",
+      "Present Continuous (Hiện tại tiếp diễn)",
+      "Future Perfect (Tương lai hoàn thành)",
+      "Past Perfect (Quá khứ hoàn thành)"
+    ],
+    "correct_index": 3,
+    "explanation": "Hành động quên xảy ra trước hành động nhận ra."
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Present Simple (Hiện tại đơn)",
+    "structure": "S + V(s/es) / S + am/is/are + Adj/Noun",
+    "usage_note": "Diễn tả một chân lý, thói quen hằng ngày hoặc một sự thật hiển nhiên.",
+    "examples": [
+      "I study English every day to improve my skills.",
+      "The sun rises in the East and sets in the West.",
+      "She usually drinks coffee in the morning before work."
+    ]
+  },
+  {
+    "name": "Present Continuous (Hiện tại tiếp diễn)",
+    "structure": "S + am/is/are + V-ing",
+    "usage_note": "Diễn tả hành động đang xảy ra tại thời điểm nói hoặc xung quanh thời điểm nói.",
+    "examples": [
+      "I am currently learning new vocabulary for my exam.",
+      "They are building a new school in the city center.",
+      "She is not working today because she is on holiday."
+    ]
+  },
+  {
+    "name": "Present Perfect (Hiện tại hoàn thành)",
+    "structure": "S + have/has + V3/ed",
+    "usage_note": "Diễn tả hành động đã hoàn thành tính đến thời điểm hiện tại mà không đề cập tới thời gian chính xác.",
+    "examples": [
+      "I have already finished my homework.",
+      "She has lived in London for five years.",
+      "We have seen this movie three times already."
+    ]
+  },
+  {
+    "name": "Present Perfect Continuous (Hiện tại hoàn thành tiếp diễn)",
+    "structure": "S + have/has + been + V-ing",
+    "usage_note": "Nhấn mạnh khoảng thời gian của một hành động bắt đầu trong quá khứ và kéo dài liên tục đến hiện tại.",
+    "examples": [
+      "I have been waiting for the bus for thirty minutes.",
+      "It has been raining all day long.",
+      "They have been studying for the exam since early morning."
+    ]
+  },
+  {
+    "name": "Past Simple (Quá khứ đơn)",
+    "structure": "S + V2/ed",
+    "usage_note": "Diễn tả hành động đã xảy ra và kết thúc hoàn toàn trong quá khứ.",
+    "examples": [
+      "I visited my friend yesterday in the hospital.",
+      "She finished her homework last night before going to bed.",
+      "They went to the cinema two days ago."
+    ]
+  },
+  {
+    "name": "Past Continuous (Quá khứ tiếp diễn)",
+    "structure": "S + was/were + V-ing",
+    "usage_note": "Diễn tả hành động đang xảy ra tại một thời điểm cụ thể trong quá khứ.",
+    "examples": [
+      "I was watching TV at 8 PM last night.",
+      "They were playing football when it started to rain.",
+      "She was cooking dinner while her husband was reading."
+    ]
+  },
+  {
+    "name": "Past Perfect (Quá khứ hoàn thành)",
+    "structure": "S + had + V3/ed",
+    "usage_note": "Diễn tả một hành động đã xảy ra và hoàn thành trước một hành động khác trong quá khứ.",
+    "examples": [
+      "I had eaten my lunch before you arrived.",
+      "She had left the office when I called her.",
+      "They had finished the project before the deadline."
+    ]
+  },
+  {
+    "name": "Past Perfect Continuous (Quá khứ hoàn thành tiếp diễn)",
+    "structure": "S + had + been + V-ing",
+    "usage_note": "Nhấn mạnh khoảng thời gian của một hành động đã đang diễn ra trước một thời điểm hoặc một hành động khác trong quá khứ.",
+    "examples": [
+      "I had been working for that company for ten years before it closed.",
+      "The ground was wet because it had been raining for hours.",
+      "She had been studying hard all night, so she was very tired."
+    ]
+  },
+  {
+    "name": "Future Simple (Tương lai đơn)",
+    "structure": "S + will + V-inf",
+    "usage_note": "Diễn tả một quyết định tại thời điểm nói hoặc một dự đoán không có căn cứ.",
+    "examples": [
+      "I will call you as soon as I get home.",
+      "I think it will rain tomorrow.",
+      "They will help you if you ask them."
+    ]
+  },
+  {
+    "name": "Future Continuous (Tương lai tiếp diễn)",
+    "structure": "S + will + be + V-ing",
+    "usage_note": "Diễn tả một hành động đang diễn ra tại một thời điểm xác định trong tương lai.",
+    "examples": [
+      "This time tomorrow, I will be flying to Japan.",
+      "They will be having dinner when you arrive.",
+      "I will be working at the office at 10 AM on Monday."
+    ]
+  },
+  {
+    "name": "Future Perfect (Tương lai hoàn thành)",
+    "structure": "S + will + have + V3/ed",
+    "usage_note": "Diễn tả một hành động sẽ hoàn thành trước một thời điểm hoặc một hành động khác trong tương lai.",
+    "examples": [
+      "I will have finished the report by tomorrow morning.",
+      "She will have graduated from university by next summer.",
+      "They will have built the bridge by the end of the year."
+    ]
+  },
+  {
+    "name": "Future Perfect Continuous (Tương lai hoàn thành tiếp diễn)",
+    "structure": "S + will + have + been + V-ing",
+    "usage_note": "Nhấn mạnh khoảng thời gian của một hành động kéo dài liên tục đến một thời điểm trong tương lai.",
+    "examples": [
+      "By next month, I will have been living here for five years.",
+      "By the time the train arrives, we will have been waiting for over an hour.",
+      "She will have been working for this firm for twenty years by the time she retires."
+    ]
+  }
+]
