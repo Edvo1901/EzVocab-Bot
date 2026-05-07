@@ -31,9 +31,15 @@ The bot is built with:
 
 ### Quiz and scheduler commands
 
-- `/quiz-now` - start a quiz immediately in current channel
-- `/daily-now` - trigger a daily word immediately
+- `/quiz-now` - start a quiz immediately in **current** channel
+- `/daily-now` - trigger a daily word immediately (configured daily word channel)
 - `/schedule-status` - view scheduler settings
+
+Developer-only (`developerid` in config):
+
+- `/test-vocab` - same as scheduled daily word post (uses `daily_word_channel_id`)
+- `/test-tense` - same as scheduled daily tense post (uses `daily_tense_channel_id`)
+- `/test-vocab-quiz` - same as scheduled daily quiz (uses `quiz_channel_id`; skips if a quiz is already active)
 
 ### Tense commands
 
