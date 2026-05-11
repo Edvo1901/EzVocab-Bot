@@ -182,6 +182,43 @@ function dailyTenseEmbed(item) {
 	});
 }
 
+function formatSentenceStructureWithId(item) {
+	return `${item.name} (ID: ${item.id})`;
+}
+
+function sentenceStructureDetailEmbed(
+	item,
+	title = 'Sentence Structure Detail',
+	color = EMBED_COLORS.info,
+) {
+	return createEmbed({
+		color,
+		titleText: title,
+		fields: [
+			{ name: 'Pattern', value: formatSentenceStructureWithId(item) },
+			{ name: 'Sentence structure', value: item.structure },
+			{ name: 'Meaning', value: item.meaningNote },
+			{ name: 'Examples', value: formatExamples(item.examples) },
+		],
+		footerText: getFooter(`ID: ${item.id}`),
+	});
+}
+
+function dailySentenceStructureEmbed(item) {
+	return createEmbed({
+		color: EMBED_COLORS.info,
+		titleText: 'Sentence Structure',
+		description: 'Patterns like conditionals, wish forms, and more.',
+		fields: [
+			{ name: 'Pattern', value: formatSentenceStructureWithId(item) },
+			{ name: 'Sentence structure', value: item.structure },
+			{ name: 'Meaning', value: item.meaningNote },
+			{ name: 'Examples', value: formatExamples(item.examples) },
+		],
+		footerText: getFooter('Daily Sentence Structure'),
+	});
+}
+
 function tenseQuizQuestionEmbed(row) {
 	return createEmbed({
 		color: EMBED_COLORS.info,
@@ -240,6 +277,9 @@ module.exports = {
 	formatTenseWithId,
 	tenseDetailEmbed,
 	dailyTenseEmbed,
+	formatSentenceStructureWithId,
+	sentenceStructureDetailEmbed,
+	dailySentenceStructureEmbed,
 	tenseQuizQuestionEmbed,
 	tenseQuizFeedbackEmbed,
 	tenseQuizCompletedEmbed,

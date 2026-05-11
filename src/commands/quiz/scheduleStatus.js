@@ -12,6 +12,7 @@ module.exports = {
 			`Timezone: ${config.timezone || 'Australia/Adelaide'}`,
 			`Daily word runs: ${(config.daily_word_times || ['09:00', '12:00', '16:00']).join(', ')}`,
 			`Daily tense run: ${config.daily_tense_time || '09:00'} -> channel ${config.daily_tense_channel_id || 'not set'}`,
+			`Daily sentence structure: ${config.daily_sentence_structure_time || '18:00'} -> channel ${config.daily_sentence_structure_channel_id || 'not set'}`,
 			`Vocab quiz run: ${config.daily_quiz_time || '20:00'} -> channel ${config.quiz_channel_id || 'not set'} (${config.quiz_question_count || 3} questions)`,
 			`Tense quiz run: ${config.daily_tense_quiz_time || '20:30'} -> channel ${config.tense_quiz_channel_id || 'not set'} (${config.tense_quiz_question_count || 3} questions)`,
 			`Policy: Skip missed runs when bot is offline.`,

@@ -16,6 +16,7 @@ The bot is built with:
   - typing repetition (3 correct submits per question)
 - Vocabulary management via slash commands + modals
 - Tense/grammar management via slash commands + modals
+- **Sentence structure patterns** (e.g. IF conditionals): separate bank from tenses; daily embed at a configurable time (default `18:00`) to a dedicated channel; **no quiz**
 - **Tense quiz** (separate from vocab quiz): sentence + four tense labels + explanation; JSON bank; scheduled MCQ-only flow in a dedicated channel
 - Case-insensitive duplicate protection by `(text, type)`
 
@@ -42,6 +43,18 @@ Developer-only (`developerid` in config):
 - `/test-tense` - same as scheduled daily tense post (uses `daily_tense_channel_id`)
 - `/test-vocab-quiz` - same as scheduled daily quiz (uses `quiz_channel_id`; skips if a quiz is already active)
 - `/test-tense-quiz` - same as scheduled tense quiz (uses `tense_quiz_channel_id`; skips if a tense quiz is already active there)
+- `/test-sentence-structure` - same as scheduled daily sentence structure post (uses `daily_sentence_structure_channel_id`)
+
+### Sentence structure commands
+
+Patterns are stored separately from verb tenses. There is **no quiz** for this category.
+
+- `/add-sentence-structure` - open modal and add one pattern
+- `/update-sentence-structure id:<id>` - update an existing pattern
+- `/delete-sentence-structure id:<id>` - hard delete by ID
+- `/search-sentence-structure text:<query>` - search patterns by name
+- `/sentence-structure-by-id id:<id>` - full detail for one pattern
+- `/import-sentence-structure-json file:<attachment>` - bulk import from JSON array
 
 ### Tense commands
 
@@ -58,6 +71,7 @@ Developer-only (`developerid` in config):
 - Timezone: `Australia/Adelaide`
 - Daily words at `09:00`, `12:00`, `16:00`
 - Daily tense at configured `daily_tense_time` (default `09:00`)
+- Daily sentence structure at configured `daily_sentence_structure_time` (default `18:00`, channel `daily_sentence_structure_channel_id`)
 - Vocabulary quiz at configured `daily_quiz_time` (channel `quiz_channel_id`)
 - Tense quiz at configured `daily_tense_quiz_time` (channel `tense_quiz_channel_id`; keep separate from vocab quiz channel so both can run)
 - Missed tasks while bot is offline are skipped (no backfill)
@@ -85,6 +99,7 @@ Important keys:
   - `token`
   - `daily_word_channel_id`
   - `daily_tense_channel_id`
+  - `daily_sentence_structure_channel_id`
   - `quiz_channel_id`
   - `tense_quiz_channel_id`
   - `botlogs_channel`
@@ -92,6 +107,7 @@ Important keys:
   - `timezone`
   - `daily_word_times`
   - `daily_tense_time`
+  - `daily_sentence_structure_time`
   - `daily_quiz_time`
   - `daily_tense_quiz_time`
   - `tense_quiz_question_count`
@@ -159,6 +175,30 @@ Use an array of objects:
     "examples": [
       "A joke can light the mood up."
     ]
+  }
+]
+```
+
+## Sentence structure JSON import format
+
+Use an array of objects. You may use **`meaning`** instead of **`meaning_note`** if you prefer.
+
+```json
+[
+  {
+    "name": "First conditional (IF Type 1)",
+    "structure": "If + S + present simple, S + will + V",
+    "meaning_note": "Real or very likely situations in the future.",
+    "examples": [
+      "If it rains, we will stay home.",
+      "If you study hard, you will pass."
+    ]
+  },
+  {
+    "name": "Second conditional",
+    "structure": "If + S + past simple, S + would + V",
+    "meaning": "Unreal or hypothetical present/future.",
+    "examples": ["If I won the lottery, I would travel the world."]
   }
 ]
 ```

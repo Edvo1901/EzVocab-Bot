@@ -115,6 +115,37 @@ BEGIN
 	ON dbo.tense_items(normalized_name);
 END;
 
+IF OBJECT_ID('dbo.sentence_structure_items', 'U') IS NULL
+BEGIN
+	CREATE TABLE dbo.sentence_structure_items (
+		id INT IDENTITY(1,1) PRIMARY KEY,
+		[name] NVARCHAR(255) NOT NULL,
+		[structure] NVARCHAR(500) NOT NULL,
+		meaning_note NVARCHAR(2000) NOT NULL,
+		examples_json NVARCHAR(MAX) NOT NULL DEFAULT '[]',
+		is_showed BIT NOT NULL DEFAULT 0,
+		created_at DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+		updated_at DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME()
+	);
+END;
+
+IF COL_LENGTH('dbo.sentence_structure_items', 'normalized_name') IS NULL
+BEGIN
+	ALTER TABLE dbo.sentence_structure_items
+	ADD normalized_name AS LOWER(LTRIM(RTRIM([name]))) PERSISTED;
+END;
+
+IF NOT EXISTS (
+	SELECT 1
+	FROM sys.indexes
+	WHERE name = 'UX_sentence_structure_items_normalized_name'
+		AND object_id = OBJECT_ID('dbo.sentence_structure_items')
+)
+BEGIN
+	CREATE UNIQUE INDEX UX_sentence_structure_items_normalized_name
+	ON dbo.sentence_structure_items(normalized_name);
+END;
+
 IF OBJECT_ID('dbo.tense_quiz_questions', 'U') IS NULL
 BEGIN
 	CREATE TABLE dbo.tense_quiz_questions (

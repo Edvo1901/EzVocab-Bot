@@ -2,7 +2,13 @@ const cron = require('node-cron');
 const config = require('../../config/config.json');
 const vocabRepository = require('./db/vocabRepository');
 const tenseRepository = require('./db/tenseRepository');
-const { dailyWordEmbed, dailyTenseEmbed, errorEmbed } = require('./embedTemplates');
+const sentenceStructureRepository = require('./db/sentenceStructureRepository');
+const {
+	dailyWordEmbed,
+	dailyTenseEmbed,
+	dailySentenceStructureEmbed,
+	errorEmbed,
+} = require('./embedTemplates');
 const quizService = require('./quizService');
 const tenseQuizService = require('./tenseQuizService');
 
@@ -115,12 +121,38 @@ async function postDailyTense(client) {
 	await tenseRepository.markAsShowed(item.id);
 }
 
+async function postDailySentenceStructure(client) {
+	const channelId = config.daily_sentence_structure_channel_id;
+	const channel = await client.channels.fetch(channelId).catch(() => null);
+	if (!channel) {
+		console.warn(`Daily sentence structure channel ${channelId} not found.`);
+		return;
+	}
+
+	const item = await sentenceStructureRepository.getRandomSentenceStructureItem();
+	if (!item) {
+		await channel.send({
+			embeds: [
+				errorEmbed(
+					'No sentence structures found',
+					'Add patterns before running the daily sentence structure post.',
+				),
+			],
+		});
+		return;
+	}
+
+	await channel.send({ embeds: [dailySentenceStructureEmbed(item)] });
+	await sentenceStructureRepository.markAsShowed(item.id);
+}
+
 async function initialize(client) {
 	const timezone = config.timezone || 'Australia/Adelaide';
 	const times = config.daily_word_times || ['09:00', '12:00', '16:00'];
 	const tenseTime = config.daily_tense_time || '09:00';
 	const quizTime = config.daily_quiz_time || '20:00';
 	const tenseQuizTime = config.daily_tense_quiz_time || '20:30';
+	const sentenceStructureTime = config.daily_sentence_structure_time || '18:00';
 
 	for (const task of scheduledTasks) {
 		task.stop();
@@ -133,9 +165,12 @@ async function initialize(client) {
 	scheduleAtTime(tenseTime, timezone, () => postDailyTense(client));
 	scheduleAtTime(quizTime, timezone, () => postDailyQuiz(client));
 	scheduleAtTime(tenseQuizTime, timezone, () => postDailyTenseQuiz(client));
+	scheduleAtTime(sentenceStructureTime, timezone, () =>
+		postDailySentenceStructure(client),
+	);
 
 	console.log(
-		`Scheduler armed (${timezone}) | daily words: ${times.join(', ')} | daily tense: ${tenseTime} | vocab quiz: ${quizTime} | tense quiz: ${tenseQuizTime}`,
+		`Scheduler armed (${timezone}) | daily words: ${times.join(', ')} | daily tense: ${tenseTime} | sentence structure: ${sentenceStructureTime} | vocab quiz: ${quizTime} | tense quiz: ${tenseQuizTime}`,
 	);
 }
 
@@ -145,4 +180,5 @@ module.exports = {
 	postDailyTense,
 	postDailyQuiz,
 	postDailyTenseQuiz,
+	postDailySentenceStructure,
 };
